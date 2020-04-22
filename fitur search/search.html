@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Effect Search Engine</title>
+<!-- Font Awesome -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Link CSS -->
+<link href="search.css" type="text/css" rel="stylesheet">
+
+<style>
+    #tanggalku{
+        position: absolute;
+        top: 172px;
+        left: 360px;
+    }
+    .animated-button1{
+        position: relative;
+        z-index: 1;
+        width: 64px;
+    }
+    #tanggalku{
+        z-index: 2;
+    }
+</style>
+
+  </head>
+
+<body class="hold-transition skin-blue sidebar-mini" onload="waktu()">
+<script type="text/javascript">
+  // 1 detik = 1000
+  window.setTimeout("waktu()",1000);
+  function waktu() {
+    var tanggal = new Date();
+    setTimeout("waktu()",1000);
+    document.getElementById("tanggalku").innerHTML = " "+tanggal.getHours()+" : "+tanggal.getMinutes()+" : "+tanggal.getSeconds()+" ";
+  }
+</script>
+
+  <div class="container">
+    <br><br>
+    <font face="Counter-Strike" size="5" color="white">
+        <div id="tanggalku"></div>
+        <a type="button" class="animated-button1" disabled>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+    </font>
+  </div>
+</body>
+</html>
